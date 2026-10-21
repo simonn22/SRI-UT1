@@ -112,3 +112,40 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 ## Archivo `hosts` de mi máquina local
 
 [hosts](evidencias/hosts)
+
+---
+
+# Apartado 4. Ampliar Nginx con módulos
+
+Para este apartado, instalo en el servidor los paquetes `libnginx-mod-http-fancyindexy` y `php-fpm`.
+
+![alt text](<evidencias/Captura de pantalla_20261021_143509.png>)
+
+También creo las carpetas y archivos necesarios para probar que todo funciona como debe:
+
+![carpetas y archivos](<evidencias/Captura de pantalla_20261021_143352.png>)
+
+## hora.php
+
+Creo el archivo `/var/www/simontest/hora.php` y añado el siguiente código:
+
+![hora.php](<evidencias/Captura de pantalla_20261021_153715.png>)
+
+## `simon.conf` adaptado para implementar `hora.php` y `fancyindex`
+
+[simon.conf actualizado](evidencias/simon_A4.conf)
+
+Como explico en los comentarios:
+
+* Para indicar a `fancyindex` que muestre un tamaño de archivo legible y no el tamaño exacto, se utiliza `fancyindex_exact_size off`
+* Para decirle al servidor cómo comunivarse con php, lo indica el bloque `location ~ \.php$`
+
+![simon.conf editado](<evidencias/Captura de pantalla_20261021_154152.png>)
+
+## `/descargas/` con fancyindex
+
+![/descargas/](<evidencias/Captura de pantalla_20261021_155256.png>)
+
+## Error `403 Forbidden` en el resto de carpetas
+
+![403 Forbidden](<evidencias/Captura de pantalla_20261021_155437.png>)

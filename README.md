@@ -60,7 +60,7 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 ## Archivos nginx.conf y sites-available/default:
 
 [nginx.conf](evidencias/nginx.conf)
-[sites-available/default](evidencias/default)
+[sites-available/default](nginx/sites-available/default)
 
 ## Cabeceras antes de ocultar la versión
 
@@ -86,28 +86,28 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 ![Intranet](evidencias/2026-10-21_10-03.png)
 
 * Su archivo de configuración:
-[intranet.conf](evidencias/intranet.conf)
+[intranet.conf](nginx/sites-available/intranet.conf)
 
 ## Sitio por defecto
 
 ![Sitio por defecto](evidencias/2026-10-21_10-05.png)
 
 * Su archivo de configuración:
-[default](evidencias/default)
+[default](nginx/sites-available/default)
 
 ## simon.test
 
 ![simon.test](<evidencias/Captura de pantalla_20261021_140018.png>)
 
 * Su archivo de configuración:
-[simon.conf](evidencias/simon.conf)
+[simon.conf](nginx/sites-available/simon.conf)
 
 ## blog.simon.test
 
 ![blog.simon.test](<evidencias/Captura de pantalla_20261021_140141.png>)
 
 * Su archivo de configuración:
-[blogsimon.conf](evidencias/blogsimon.conf)
+[blogsimon.conf](nginx/sites-available/blogsimon.conf)
 
 ## Archivo `hosts` de mi máquina local
 
@@ -133,7 +133,7 @@ Creo el archivo `/var/www/simontest/hora.php` y añado el siguiente código:
 
 ## `simon.conf` adaptado para implementar `hora.php` y `fancyindex`
 
-[simon.conf actualizado](evidencias/simon_A4.conf)
+[simon.conf actualizado](nginx/sites-available/simon_A4.conf)
 
 Como explico en los comentarios:
 
@@ -149,3 +149,5 @@ Como explico en los comentarios:
 ## Error `403 Forbidden` en el resto de carpetas
 
 ![403 Forbidden](<evidencias/Captura de pantalla_20261021_155437.png>)
+
+## Apartado 

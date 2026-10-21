@@ -72,7 +72,7 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 
 ## Respuesta de `/estado/`
 
-![alt text](evidencias/2026-10-21_09-32.png)
+![estado](evidencias/2026-10-21_09-32.png)
 
 # Apartado 3. Sitios virtuales
 
@@ -85,8 +85,30 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 
 ![Intranet](evidencias/2026-10-21_10-03.png)
 
+* Su archivo de configuración:
+[intranet.conf](evidencias/intranet.conf)
+
 ## Sitio por defecto
 
 ![Sitio por defecto](evidencias/2026-10-21_10-05.png)
 
-AÑADIR CAPTURAS DE LOS OTROS SITIOS Y SUBIR EL ARCHIVO HOSTS Y LOS FICHEROS DE CONFIGURACION DE LOS TRES SITIOS
+* Su archivo de configuración:
+[default](evidencias/default)
+
+## simon.test
+
+![simon.test](<evidencias/Captura de pantalla_20261021_140018.png>)
+
+* Su archivo de configuración:
+[simon.conf](evidencias/simon.conf)
+
+## blog.simon.test
+
+![blog.simon.test](<evidencias/Captura de pantalla_20261021_140141.png>)
+
+* Su archivo de configuración:
+[blogsimon.conf](evidencias/blogsimon.conf)
+
+## Archivo `hosts` de mi máquina local
+
+[hosts](evidencias/hosts)

@@ -35,7 +35,7 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 
 ---
 
-# Apartado 2
+# Apartado 2. Instalación y configuración básica de Nginx
 
 ## Configuracion de los sitios de Nginx
 
@@ -56,3 +56,37 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 
 * Verifico la configuración de Nginx, y siendo correcta la aplico y reinicio el servicio:
 ![Configuracion de nginx](evidencias/2026-10-21_09-14.png)
+
+## Archivos nginx.conf y sites-available/default:
+
+[nginx.conf](evidencias/nginx.conf)
+[sites-available/default](evidencias/default)
+
+## Cabeceras antes de ocultar la versión
+
+![con version](evidencias/2026-10-21_09-27.png)
+
+## Cabeceras *después* de ocultar la versión
+
+![sin version](evidencias/2026-10-21_09-26.png)
+
+## Respuesta de `/estado/`
+
+![alt text](evidencias/2026-10-21_09-32.png)
+
+# Apartado 3. Sitios virtuales
+
+## Contenido de sites-enabled
+
+![Contenido de sites-enabled](evidencias/2026-10-21_10-01.png)
+![La configuración no contiene errores](evidencias/2026-10-21_10-02.png)
+
+## Intranet
+
+![Intranet](evidencias/2026-10-21_10-03.png)
+
+## Sitio por defecto
+
+![Sitio por defecto](evidencias/2026-10-21_10-05.png)
+
+AÑADIR CAPTURAS DE LOS OTROS SITIOS Y SUBIR EL ARCHIVO HOSTS Y LOS FICHEROS DE CONFIGURACION DE LOS TRES SITIOS

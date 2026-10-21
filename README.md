@@ -32,3 +32,27 @@ Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 ## Salida de timedatectl
 
 ![timedatectl](<evidencias/Captura de pantalla_20261019_192503.png>)
+
+---
+
+# Apartado 2
+
+## Configuracion de los sitios de Nginx
+
+* Creo la carpeta para el sitio:
+![Creo la carpeta para el sitio](evidencias/2026-10-21_08-59.png)
+
+* Cambio la ruta del sitio por defecto para que apunte a mi nueva carpeta:
+![Cambio la ruta del sitio por defecto](evidencias/2026-10-21_09-01.png)
+
+* Creo un archivo simple index.html:
+![Creo index.html](evidencias/2026-10-21_09-03.png)
+
+* Creo `/var/www/simon/estado/index.html` con un texto simple que indica que el servidor funciona:
+![Creo /var/www/simon/estado/index.html](evidencias/2026-10-21_09-06.png)
+
+* Modifico el archivo `/etc/nginx/nginx.conf` para ocultar la versión de Nginx en las cabeceras. Se cambia el valor de esta línea a `off`:
+![server_tokens off](evidencias/2026-10-21_09-12.png)
+
+* Verifico la configuración de Nginx, y siendo correcta la aplico y reinicio el servicio:
+![Configuracion de nginx](evidencias/2026-10-21_09-14.png)

@@ -1,6 +1,6 @@
-Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
+# Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 
-# Apartado 1
+# Apartado 1. Tu red y tu instancia en AWS
 
 ### VPC:
 
@@ -150,4 +150,62 @@ Como explico en los comentarios:
 
 ![403 Forbidden](<evidencias/Captura de pantalla_20261021_155437.png>)
 
-## Apartado 
+---
+
+# Apartado 5. Autenticación y control de acceso
+
+## Instalar `apache2-utils`
+
+![Instalar apache2-utils](<evidencias/Captura de pantalla_20261021_165139.png>)
+
+### Averiguar IP pública de mi equipo
+
+Para esto uso echo `$SSH_CLIENT` mientras estoy conectado a la máquina remota.
+
+## Fichero para `intranet`
+
+![Usuario simon](<evidencias/Captura de pantalla_20261021_165856.png>)
+
+![Usuario profesor](<evidencias/Captura de pantalla_20261021_170227.png>)
+
+## Fichero para Admin
+
+![Admin simon](<evidencias/Captura de pantalla_20261021_170551.png>)
+
+### Ajustar permisos de los ficheros
+
+Para cumplir el requisito de que solo root y www-data puedan leerlos, cambio el propietario y los permisos:
+
+![Permisos y propietario de los ficheros](<evidencias/Captura de pantalla_20261021_170854.png>)
+
+## Editar el archivo `intranet.conf`
+
+![intranet.conf actualizado](<evidencias/Captura de pantalla_20261021_171138.png>)
+
+[intranet.conf actualizado](nginx/sites-available/intranet_A5.conf)
+
+## Configurar web principal (carpeta `/admin/`)
+
+En este caso la configuración solo se aplica dentro del bloque location /admin/ para que solo pida autenticación ahí:
+
+![simon.conf (/admin/)](<evidencias/Captura de pantalla_20261021_171551.png>)
+
+## Acceso a la intranet
+
+![Acceso a intranet](<evidencias/Captura de pantalla_20261021_171913.png>)
+
+## Acceso a /admin/ desde la IP permitida
+
+![Acceso a /admin/ desde IP permitida](<evidencias/Captura de pantalla_20261021_172152.png>)
+
+## Acceso a /admin/ desde el propio servidor
+
+![Acceso a admin desde el propio servidor](<evidencias/Captura de pantalla_20261021_172407.png>)
+
+## Acceso a /admin/ desde fuera de la red
+
+Como puede comprobarse, estando fuera de la red solicita usuario para acceder a `/admin/`.
+En caso de intentar entrar como `profesor`, rechaza el acceso, pero al entrar como `simon` sí lo permite.
+
+![Acceso a /admin/ desde fuera de la red](<evidencias/Captura de pantalla_20261021_173058.png>)
+

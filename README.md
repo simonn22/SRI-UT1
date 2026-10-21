@@ -1,5 +1,49 @@
 # Esta es la tarea del alumno Simón Jiménez del curso ASIR2, módulo SRI.
 
+## Índice
+
+1. [Apartado 1. Tu red y tu instancia en AWS](#apartado-1-tu-red-y-tu-instancia-en-aws)
+   - [VPC](#vpc)
+   - [Subred pública](#subred-pública)
+   - [Grupo de seguridad con mínimo privilegio](#grupo-de-seguridad-con-mínimo-privilegio)
+   - [Instancia EC2](#instancia-ec2)
+   - [Mapa de recursos de la VPC](#mapa-de-recursos-de-la-vpc)
+   - [Salida de timedatectl](#salida-de-timedatectl)
+2. [Apartado 2. Instalación y configuración básica de Nginx](#apartado-2-instalación-y-configuración-básica-de-nginx)
+   - [Configuración de los sitios de Nginx](#configuracion-de-los-sitios-de-nginx)
+   - [Archivos nginx.conf y sites-available/default](#archivos-nginxconf-y-sites-availabledefault)
+   - [Cabeceras antes de ocultar la versión](#cabeceras-antes-de-ocultar-la-versión)
+   - [Cabeceras después de ocultar la versión](#cabeceras-después-de-ocultar-la-versión)
+   - [Respuesta de /estado/](#respuesta-de-estado)
+3. [Apartado 3. Sitios virtuales](#apartado-3-sitios-virtuales)
+   - [Contenido de sites-enabled](#contenido-de-sites-enabled)
+   - [Intranet](#intranet)
+   - [Sitio por defecto](#sitio-por-defecto)
+   - [simon.test](#simontest)
+   - [blog.simon.test](#blogsimontest)
+   - [Archivo hosts de mi máquina local](#archivo-hosts-de-mi-máquina-local)
+4. [Apartado 4. Ampliar Nginx con módulos](#apartado-4-ampliar-nginx-con-módulos)
+   - [hora.php](#horaphp)
+   - [simon.conf adaptado para implementar hora.php y fancyindex](#simonconf-adaptado-para-implementar-horaphp-y-fancyindex)
+   - [/descargas/ con fancyindex](#descargas-con-fancyindex)
+   - [Error 403 Forbidden en el resto de carpetas](#error-403-forbidden-en-el-resto-de-carpetas)
+5. [Apartado 5. Autenticación y control de acceso](#apartado-5-autenticación-y-control-de-acceso)
+   - [Instalar apache2-utils](#instalar-apache2-utils)
+   - [Fichero para intranet](#fichero-para-intranet)
+   - [Fichero para Admin](#fichero-para-admin)
+   - [Editar el archivo intranet.conf](#editar-el-archivo-intranetconf)
+   - [Configurar web principal (carpeta /admin/)](#configurar-web-principal-carpeta-admin)
+   - [Acceso a la intranet](#acceso-a-la-intranet)
+   - [Acceso a /admin/ desde la IP permitida](#acceso-a-admin-desde-la-ip-permitida)
+   - [Acceso a /admin/ desde el propio servidor](#acceso-a-admin-desde-el-propio-servidor)
+   - [Acceso a /admin/ desde fuera de la red](#acceso-a-admin-desde-fuera-de-la-red)
+6. [Apartado 6. Registros: estadísticas e incidencias](#apartado-6-registros-estadísticas-e-incidencias)
+   - [6.1. Un registro para cada sitio](#61-un-registro-para-cada-sitio)
+   - [6.2. Estadísticas desde la terminal](#62-estadísticas-desde-la-terminal)
+   - [Informe visual con GoAccess](#informe-visual-con-goaccess)
+
+---
+
 # Apartado 1. Tu red y tu instancia en AWS
 
 ### VPC:
@@ -73,6 +117,8 @@
 ## Respuesta de `/estado/`
 
 ![estado](evidencias/a2_09_respuesta_estado.png)
+
+---
 
 # Apartado 3. Sitios virtuales
 

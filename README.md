@@ -190,6 +190,8 @@ En este caso la configuración solo se aplica dentro del bloque location /admin/
 
 ![simon.conf (/admin/)](<evidencias/Captura de pantalla_20261021_171551.png>)
 
+[simon.conf actualizado](nginx/sites-available/simon_A5.conf)
+
 ## Acceso a la intranet
 
 ![Acceso a intranet](<evidencias/Captura de pantalla_20261021_171913.png>)
@@ -209,3 +211,37 @@ En caso de intentar entrar como `profesor`, rechaza el acceso, pero al entrar co
 
 ![Acceso a /admin/ desde fuera de la red](<evidencias/Captura de pantalla_20261021_173058.png>)
 
+---
+
+# Apartado 6. Registros: estadísticas e incidencias
+
+## 6.1. Un registro para cada sitio
+
+Los siguientes cambios se añadirán bajo server_name:
+
+### En simon.conf se añade lo siguiente
+
+```nginx
+access_log /var/log/nginx/simon.access.log;
+error_log  /var/log/nginx/simon.error.log;
+```
+
+[Archivo actualizado](nginx/sites-available/simon_A6.conf)
+
+### En blogsimon.conf se añade lo siguiente
+
+```nginx
+access_log /var/log/nginx/blog.access.log;
+error_log  /var/log/nginx/blog.error.log;
+```
+
+[Archivo actualizado](nginx/sites-available/blogsimon_A6.conf)
+
+### En intranet.conf se añade lo siguiente
+
+```nginx
+access_log /var/log/nginx/intranet.access.log;
+error_log  /var/log/nginx/intranet.error.log;
+```
+
+[Archivo actualizado](nginx/sites-available/intranet_A6.conf)

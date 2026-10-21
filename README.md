@@ -245,3 +245,37 @@ error_log  /var/log/nginx/intranet.error.log;
 ```
 
 [Archivo actualizado](nginx/sites-available/intranet_A6.conf)
+
+## 6.2. Estadísticas desde la terminal
+
+Se han realizado intentos variados, como accesos correctos, con usuario incorrecto, estando fuera de la red permitida para entrar a /admin/ etc.
+
+### Para ver el numero total de peticiones
+
+![Num total de peticiones](<evidencias/Captura de pantalla_20261021_180930.png>)
+
+### Para ver las 5 IP que más peticiones hacen
+
+![5 IP con mas peticiones](<evidencias/Captura de pantalla_20261021_181059.png>)
+
+### Para ver cuántas respuestas hay de cada código
+
+![Cuantas respuestas hay de cada codigo](<evidencias/Captura de pantalla_20261021_181205.png>)
+
+### Para ver qué rutas dan 404 y cuántas veces
+
+![Errores 404](<evidencias/Captura de pantalla_20261021_181311.png>)
+
+### Para ver la hora del día con más peticiones
+
+![Hora del dia con más peticiones](<evidencias/Captura de pantalla_20261021_181533.png>)
+
+## Informe visual con GoAccess
+
+Para instalarlo uso `sudo apt install -y goaccess`.
+
+Para generar el informe uso `sudo goaccess /var/log/nginx/simon.access.log --log-format=COMBINED -o /var/www/intranet/informe.html`
+
+Salida:
+
+![alt text](<evidencias/Captura de pantalla_20261021_181922.png>)
